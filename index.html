@@ -1,18 +1,87 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SirSplash Projects</title>
+  <meta name="description" content="A curated portfolio of projects by SirSplash, featuring algorithms, graphics, games, and tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
+  <div class="background-layer" aria-hidden="true"></div>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+  <header class="site-header">
+    <nav class="top-nav">
+      <a class="brand" href="#top">SirSplash</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="https://github.com/sirsplash" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+    <section class="hero" id="top">
+      <div class="hero-profile">
+        <img class="profile-avatar" src="https://github.com/ryanjakegarcia.png?size=256" alt="Ryan Jake Garcia GitHub profile picture">
+      </div>
+      <p class="eyebrow">Portfolio Refresh</p>
+      <h1>Projects with clear problems, thoughtful engineering, and playable results.</h1>
+      <p class="hero-text">
+        This page highlights selected repositories and one published game. Repos are loaded from GitHub,
+        then merged with custom summaries so each card explains what it actually solves.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">View Featured Projects</a>
+        <a class="button button-secondary" href="https://sirsplash.itch.io/building-protection" target="_blank" rel="noopener noreferrer">Play Building Protection</a>
+      </div>
+    </section>
+  </header>
 
+  <main>
+    <section class="projects-section" id="projects">
+      <div class="section-head">
+        <h2>Featured Work</h2>
+        <p>Filter by topic or search by name and tech stack.</p>
+      </div>
+
+      <div class="controls" aria-label="Project controls">
+        <input id="searchInput" type="search" placeholder="Search projects or tags" aria-label="Search projects">
+        <div class="filter-group" id="tagFilters" role="group" aria-label="Filter projects"></div>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+      <p id="projectsStatus" class="projects-status">Loading projects...</p>
+    </section>
+
+    <section class="case-section" id="case-studies">
+      <div class="section-head">
+        <h2>Case Study Highlights</h2>
+        <p>Starter snapshots. You can expand these into full writeups later.</p>
+      </div>
+
+      <article class="case-card">
+        <h3>Connect4 Solver</h3>
+        <p><strong>Problem:</strong> Find optimal Connect4 moves quickly enough for interactive use.</p>
+        <p><strong>Approach:</strong> Game tree search with pruning, board evaluation heuristics, and efficient state handling.</p>
+        <p><strong>Result:</strong> Produces strong move choices and explains why a move is preferred.</p>
+      </article>
+
+      <article class="case-card">
+        <h3>Simple Raycaster</h3>
+        <p><strong>Problem:</strong> Render pseudo-3D scenes from a 2D map with minimal complexity.</p>
+        <p><strong>Approach:</strong> Per-column ray marching, distance correction, and texture or color shading by depth.</p>
+        <p><strong>Result:</strong> A compact graphics prototype that demonstrates core 3D rendering principles.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for GitHub Pages. Update repo metadata in script.js to tune project summaries and tags.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
